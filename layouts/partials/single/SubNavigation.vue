@@ -15,9 +15,9 @@
       </div>
 
       <div class="next-media-sub-navbar__return">
-        <a href="#" class="next-media-sub-navbar__control_return__button">
+        <nuxt-link :to="{ name: 'index' }" class="next-media-sub-navbar__control_return__button">
           <img src="@/assets/img/return-button.svg" alt="return to home page">
-        </a>
+        </nuxt-link>
       </div>
     </div>
   </nav>

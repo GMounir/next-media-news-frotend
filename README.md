@@ -1,6 +1,6 @@
-# next-media
+# next media news project test
 
-> Next media test project
+> next media news project test
 
 ## Build Setup
 
