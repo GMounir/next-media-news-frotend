@@ -1,3 +1,4 @@
+const webpack = require('webpack')
 
 module.exports = {
   mode: 'universal',
@@ -16,13 +17,18 @@ module.exports = {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
+      { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.7.2/css/all.css', integrity:'sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr', crossorigin:'anonymous' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#9b4d9c' },
+
+  axios: {
+    baseURL: 'http://femme.nextmedia.ma/api'
+  },
   /*
   ** Global CSS
   */
@@ -42,13 +48,19 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
-    // Doc: https://github.com/nuxt-community/modules/tree/master/packages/bulma
+    '@nuxtjs/axios',
     '@nuxtjs/bulma',
   ],
   /*
   ** Build configuration
   */
   build: {
+    plugins: [
+      new webpack.ProvidePlugin({
+        '_': 'lodash',
+        'moment': 'moment'
+      })
+    ],
     postcss: {
       preset: {
         features: {
