@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Cairo:400,700&display=swap');
+
+body {
+  font-family: 'Cairo', sans-serif;
+}
+
+// we can move this block to file like helpers
+.pt-1 {
+  padding-top: 40px;
+}
+
+.pb-1 {
+  padding-bottom: 40px;
+}
+.mt-1 {
+  margin-top: 40px;
+}
+
+.mb-1 {
+  margin-bottom: 40px;
+}
